@@ -3,7 +3,7 @@ from wagtail.models import Page
 
 class SimpleTest(TestCase):
     def test_addition(self):
-        print("teste funcionando")
+
         self.assertEqual(1 + 1, 2)
 
 def minha_funcao(nome):
