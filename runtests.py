@@ -24,7 +24,7 @@ def make_parser():
     parser.add_argument("--emailuser", action="store_true")
     parser.add_argument("--disabletimezone", action="store_true")
     parser.add_argument("--bench", action="store_true")
-    parser.add_argument("--customwagtailtests", action="store_true", help="Run custom Wagtail core tests")
+    parser.add_argument("--customwagtailtests", action="store_true")
 
     return parser
 
@@ -88,7 +88,7 @@ def runtests():
         argv = [sys.argv[0], "test"] + rest
 
     if args.customwagtailtests:
-        argv = [sys.argv[0], "test", "wagtail.admin.tests.testptoss3"] + rest
+        argv = [sys.argv[0], "test", "wagtail.images.tests.test_checks"] + rest
 
     try:
         execute_from_command_line(argv)
